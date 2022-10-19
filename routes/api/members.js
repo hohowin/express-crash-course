@@ -56,7 +56,10 @@ router.delete('/:id', (req, res) => {
     console.log(req.params.id);
     const found = members.some(member => member.id === parseInt(req.params.id));
     if (found) {
-        res.json({msg: `Member ${req.params.id} deleted`});
+        res.json({
+            msg: `Member ${req.params.id} deleted`,
+            members: members.filter(member => member.id !== parseInt(req.params.id))
+        });
     } else {
         res.status(400).json({msg: `Member ${req.params.id} not found`});
     }    

@@ -75,5 +75,8 @@ http://localhost:5000/api/members/1
 
 ---
 
-## For Delete:
+## For Delete, try:
+
+- http://localhost:5000/api/members/1
+
 
